@@ -171,7 +171,7 @@ static const CGFloat kDefaultHideInterval = 2.0;
     // or above top of screen, if there is no such view. Assign it to property to animate later.
     CGFloat topOffset = -self.frame.size.height;
     if (self.viewAboveBanner)
-        topOffset += CGRectGetMaxY(self.viewAboveBanner.frame);
+        topOffset += CGRectGetMaxY(self.viewAboveBanner.frame) + 20;
     NSArray *topConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(offset)-[self]"
                                                                       options:0
                                                                       metrics:@{@"offset": @(topOffset)}
